@@ -1,0 +1,25 @@
+logging:
+  level:
+    reactor:
+      netty:
+        http:
+          client: TRACE
+    org:
+      springframework:
+        cloud:
+          gateway: TRACE
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedHeaders:
+              - content-type
+            allowedMethods:
+              - GET
+              - POST
+              - PATCH
+              - DELETE
